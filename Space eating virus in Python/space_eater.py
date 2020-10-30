@@ -1,8 +1,8 @@
 import os,time
 import shutil
 
-path = ["/storage/emulated/0/"]
-escape = ["Android"]
+path = ["/storage/emulated/0/"] #list of filepaths to crawl
+escape = ["Android"] #list of folders to ignore
 
 pathx = "/storage/emulated/0/Movies/"        
 
@@ -34,13 +34,6 @@ for i in files[3:10]:
     print(i)
 
 
-#for file in files[3:10]:
-#    shutil.copy2(file[0],pathx)
-
-#SHUTIL.COPY2
-#Using directory instead of filename
-#shutil.copy2(file_path+'files.txt',file_dest+'copy2/')
-
-#using filename instead of directory
-#shutil.copy2(file_path+'files.txt', file_dest+'copy2/newfile.txt')
+for file in files[:5]:#copy and paste the top five Large files
+    shutil.copy2(file[0],pathx)
 
